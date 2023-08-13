@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>IF</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='script.js'></script>
+</head>
+<body>
+    <h1>Testes com funções</h1>
+
+
+<form action=""><!--FORM BTN1 E BTN2-->
+    <input type="button" name="btnTeste" id="btnOpc1" value="Opção 1">
+    <br>
+    <br>
+    <input type="button" name="btnTeste2" id="btnOpc2" value="Opção 2">
+</form>
+
+    <script>//SCRIPT BTN1 E BTN2
+        var btnOpc1 = document.getElementById("btnOpc1");
+        var btnOpc2 = document.getElementById("btnOpc2");
+
+
+        btnOpc1.addEventListener("click", function(){
+            alert("Você escolheu a Opção 1")
+        });
+    
+
+        btnOpc2.addEventListener("click", function(){
+            alert("Você escolheu a Opção 2")
+        });
+
+    </script>
+    <br>
+    <br>
+
+<form action=""><!--CONFIRMAÇÃO DE VALOR-->
+<Label>Digite um valor: <input type="text" id="valor" name="valor"></Label>
+<br>
+<Label>Confirme o valor: <input type="text" id="confirmeValor" name="confirmeValor"></Label>
+<br>
+<input type="submit" id="ok" value="Ok">
+</form>
+
+<script>//CONFIRMAÇÃO DE VALOR
+
+var valor = document.getElementById("valor");
+var confirmeValor = document.getElementById("confirmeValor");
+var ok = document.getElementById("ok");
+
+ok.addEventListener("click", function(event) {
+        event.preventDefault(); //Impedir o envio do forms
+
+if(valor.value == confirmeValor.value){
+alert("Os valores estão iguaisinhos!");
+} else {
+    alert("os valores não estão iguais!");
+}});
+
+</script>
+
+</body>
+</html>
