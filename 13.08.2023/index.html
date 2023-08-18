@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo SWITCH</title>
+</head>
+<body>
+
+    <label for="cargos">--Selecione um cargo--</label>
+
+    <select name="cargos" id="cargos"><!--SELECT-->
+    <option value="vazio"></option> 
+    <option value="ceo">CEO</option>
+    <option value="cto">CTO</option>
+    <option value="cfo">CFO</option>
+    <option value="coo">COO</option>
+    <option value="engenheiro">Engenheiro de Software</option>
+    <option value="designer">Designer de UI/UX</option>
+    <option value="analista">Analista de Dados</option>
+    <option value="gerente">Gerente de Marketing</option>
+    </select><!--SELECT-->
+
+    <p id="resultado"></p>
+
+<script>
+
+let cargo = document.getElementById("cargos");
+let result = document.getElementById("resultado")
+
+cargo.addEventListener("change", function(){
+    const cargoSelecionado = cargo.value;
+
+    switch(cargoSelecionado){
+
+        case "vazio":
+        result.textContent = "Selecione um cargo!"
+        break;//VAZIO
+        
+        case "ceo":
+        result.textContent = "Este é o cargo CEO"
+        break;//CEO
+
+        case "cto":
+        result.textContent = "Este é o cargo CTO"
+        break;//CTO
+
+        case "cfo":
+        result.textContent = "Este é o cargo CFO"
+        break;//CFO
+
+        case "coo": result.textContent = "este é o cargo COO"
+        break;//COO
+
+        case "engenheiro": result.textContent = "este é o cargo Engenheiro"
+        break;//ENGENHEIRO
+
+        case "designer": result.textContent = "este é o cargo Designer"
+        break;//DESIGNER
+
+        case "analista": result.textContent = "este é o cargo Analista"
+        break;//ANALISTA
+
+        case "gerente": result.textContent = "este é o cargo Gerente"
+        break;//GERENTE
+
+        default:result.textContent = "Não cadastrado"
+    }
+})
+
+
+
+</script>
+
+
+</body>
+</html>
